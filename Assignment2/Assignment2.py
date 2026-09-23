@@ -3,9 +3,9 @@
 # Student Name:         Brendan McCaffrey
 # Assignment Number:    Lab2
 # Due Date:             10/2/2026
-# Purpose:              Purpose: Read student scores from a file, calculate each student's average,
+# Purpose:              Read student scores from a file, calculate each student's average,
 #                       sort the students from highest to lowest average, and display the results.
-# Resources used:       Resources used: Module 2-1 Methods slides and Module 2-2 Files-Objects slides.
+# Resources used:       Module 2-1 Methods slides and Module 2-2 Files-Objects slides.
 
 def main():
     # Create an empty list to store each student's name and average
@@ -18,16 +18,16 @@ def main():
     for line in input_file:
 
         # Split the line into separate fields
-        data = line.split()
+        row = line.split()
 
         # The first field contains the student's name
-        name = data[0]
+        name = row[0]
 
         # Add the six score fields together
         total = 0
 
         for index in range(1, 7):
-            total += int(data[index])
+            total += int(row[index])
 
         # Calculate the student's average
         average = total / 6
